@@ -1,0 +1,33 @@
+{
+  "name": "rust-types",
+  "version": "0.1.0",
+  "description": "Library with models shared between my projects for Facepunch's Rust game",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3env/rust-types.git"
+  },
+  "keywords": [
+    "facepunch",
+    "rust",
+    "server",
+    "types"
+  ],
+  "author": "Sergey Tulonov @k3env",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k3env/rust-types/issues"
+  },
+  "homepage": "https://github.com/k3env/rust-types#readme",
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
