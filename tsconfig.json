@@ -5,7 +5,9 @@
     "declaration": true,
     "outDir": "lib",
     "strict": true,
-    "removeComments": true
+    "removeComments": true,
+    "esModuleInterop": true,
+    "isolatedModules": false
   },
   "include": ["src/**/*"]
 }
