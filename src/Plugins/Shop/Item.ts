@@ -1,4 +1,4 @@
-export interface Item {
+export interface ShopItem {
   DisplayName: string;
   Skin: number;
   Image: string;
@@ -8,3 +8,5 @@ export interface Item {
   SellPrice: number;
   Currency: string;
 }
+
+export type ShopItemList = { [key: string]: ShopItem };

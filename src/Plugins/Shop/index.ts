@@ -1,4 +1,4 @@
-import { Item } from "./Item";
-import { Category } from "./Category";
+import { ShopItem, ShopItemList } from "./Item";
+import { ShopCategory, ShopCategoryList } from "./Category";
 
-export { Item, Category };
+export { ShopCategory, ShopCategoryList, ShopItem, ShopItemList };
