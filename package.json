@@ -1,6 +1,6 @@
 {
-  "name": "@k3env/rust-types",
-  "version": "0.1.0",
+  "name": "rust-lib",
+  "version": "0.1.2",
   "description": "Library with models shared between my projects for Facepunch's Rust game",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
