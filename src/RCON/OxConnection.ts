@@ -1,11 +1,11 @@
 import { OxRequest, OxRequestFabric } from "./OxRequest";
 import { OxResponse } from "./OxResponse";
-import * as ws from "ws";
+import { WebSocket } from "ws";
 
 type callbackType<T> = (response: T) => unknown;
 
 export class OxConnection {
-  private _ws: ws.WebSocket;
+  private _ws: WebSocket;
   private _fabric: OxRequestFabric;
 
   private cbList: { [key: number]: (msg: OxResponse) => void } = {};
@@ -18,7 +18,7 @@ export class OxConnection {
     onMessage: (msg: OxResponse) => void
   ) {
     this._fabric = new OxRequestFabric("rustlib");
-    this._ws = new ws.WebSocket(`ws://${address}:${port}/${password}`);
+    this._ws = new WebSocket(`ws://${address}:${port}/${password}`);
     this._ws.onopen = onConnect;
     this._ws.onmessage = (m) => {
       const res: OxResponse =
@@ -31,9 +31,6 @@ export class OxConnection {
         onMessage(res);
       }
     };
-
-    let a = [1, 2, 3];
-    a.splice;
   }
 
   SendCommand(request: OxRequest, callback: callbackType<OxResponse>): void {
@@ -46,10 +43,6 @@ export class OxConnection {
       const messages: OxResponse[] = JSON.parse(r.Message);
       callback(messages);
     });
-  }
-
-  get Ready() {
-    return this._ws.readyState === WebSocket.OPEN;
   }
 
   Disconnect(): void {
